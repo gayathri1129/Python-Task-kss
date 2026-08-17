@@ -1,0 +1,39 @@
+Python 3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)] on win32
+Enter "help" below or click "Help" above for more information.
+>>> #1. Payment System (Runtime Polymorphism) An online store supports multiple payment methods: CreditCard, UPI, and NetBanking. Create a base class Payment with a method process_payment() and override it in each payment type.
+>>> class payment:
+...     def process_payment(self):
+...         print("processing payment")
+... 
+...         
+>>> class creditcard(payment):
+...     def process_payment(self):
+...         print("payment processing using credit card")
+... 
+...         
+>>> class upi(payment):
+...     def process_payment(self):
+...         print("processing paymnet using upi")
+... 
+...         
+>>> class netbanking(payment):
+...     def process_payment(self):
+...         print("payment processing usuing net banking")
+... 
+...         
+>>> payment=[creditcard(),upi(),netbanking()]
+>>> for payment in payments:
+...     payment.process_payment()
+... 
+...     
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    for payment in payments:
+NameError: name 'payments' is not defined. Did you mean: 'payment'?
+>>> for payment in payment:
+...     payment.process_payment()
+... 
+...     
+payment processing using credit card
+processing paymnet using upi
+payment processing usuing net banking
